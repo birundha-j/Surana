@@ -1,38 +1,68 @@
-.App {
-  text-align: center;
+/* .HeaderResume{
+  background-color: white;
+  width: 100%;
+}
+.SiderView{
+  height: 600px;
+  background-color: rgb(69, 20, 160);
+} */
+
+.navbarContainer .MuiGrid-spacing-xs-2{
+  margin: auto;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.userInfo{
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-around;
 }
 
-.App-link {
-  color: #61dafb;
+.customIcon_header{
+  font-size: 35px !important;
+  color: black;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.customIconArrow_header{
+  font-size: 30px !important;
+  color: black;
+}
+
+@media only screen and (max-width: 1000px) {
+  .customIcon_header{
+    font-size: 20px !important;;
   }
-  to {
-    transform: rotate(360deg);
+  .customIconArrow_header{
+    font-size: 15px !important;;
   }
+}
+
+
+.customSearch_Header .ant-input{
+  border-top-left-radius: 13px;
+  border-bottom-left-radius: 13px;
+}
+
+.customSearch_Header .ant-input ~ span,.customSearch_Header .ant-input ~ span button{
+  border-top-right-radius: 13px !important;
+  border-bottom-right-radius: 13px !important;
+}
+.Header_Title{
+  color: #420F8D;
+  font-weight: bold;
+  font-size: 24px;
+  padding-left: 8% !important;
+}
+.userName{
+  color: #8A8A8A;
+  font-weight: bold;
+  font-size: 16px;
+
+}
+.userPosition{
+  color: #8A8A8A;
+
+}
+
+.Container{
+  height: 700px;
+  /* background-color: #E4E4E4; */
 }
