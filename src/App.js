@@ -17,10 +17,18 @@ import ArrowDropDownCircleIcon from '@material-ui/icons/ArrowDropDownCircle';
 import { Select, Row, Col } from 'antd'
 import { DownCircleTwoTone } from '@ant-design/icons'
 import AccountBoxIcon from '@material-ui/icons/AccountBox';
+import List from '@material-ui/core/List';
+import ListItem from '@material-ui/core/ListItem';
+import ListItemIcon from '@material-ui/core/ListItemIcon';
+import ListItemText from '@material-ui/core/ListItemText';
 
 // input icons:
 import SelectionIcon from './images/selectIcon.png'
-import CalenderIcon from './images/calendericon.png'
+// Router:
+import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom';
+import ResumePage from './component/ResumePage/Resume'
+import Dashboard from './component/DashBoard/dashboard'
+
 
 
 const { Option } = Select
@@ -111,266 +119,43 @@ export default function ClippedDrawer() {
           <Grid className="Logostructure">
             <div className="LogoDesign">Logo</div>
           </Grid>
+          <a href={'/'}>
+            <div className="ResumeSider">
+              <AccountBoxIcon style={{ color: "white" }} className="customIcon_header" />
+              <div className="SiderResume_Button">RESUME</div>
 
-          <div className="ResumeSider">
-            <AccountBoxIcon style={{ color: "white" }} className="customIcon_header" />
-            <div className="SiderResume_Button">RESUME</div>
+            </div>
+          </a>
+          <a href={'/dashboard'}>
+            <div className="ResumeSider">
+              <NotificationsIcon style={{ color: "pink" }} className="customIcon_header" />
+              <div className="SiderResume_Button">  DASHBOARD</div>
 
-          </div>
+            </div>
+          </a>
+
+          
+          {/* <List>
+
+            <ListItem button key={"Resume"}  >
+              <ListItemIcon><NotificationsIcon style={{ color: "white" }} /></ListItemIcon>
+              <ListItemText primary={"Resume"} />
+            </ListItem>
+
+          </List> */}
         </div>
       </Drawer>
       <main className={` MasterContainer ${classes.content}`}>
         <Toolbar />
-        <div className="Container">
-          <Grid item xs={12} className="ContentTitle">
-            Add Resume
+        <div>
+          <Router >
+            <Switch>
+              <Route exact path='/' component={ResumePage} />
+              <Route path='/dashboard' component={Dashboard} />
 
-          </Grid>
-          <div className="master_container">
-            <div className="Left_Container">
-              <Grid container direction="column" spacing={1}>
-                <Grid item xs={8} container alignItems="center" className="ContainerInput">
-                  <Input placeholder="User Id(Auto Generated)" />
-                </Grid>
-
-                <Grid item xs={8} container alignItems="center" className="ContainerInput" >
-                  <Input placeholder="Name   " />
-                </Grid>
-
-                <Grid item xs={6} className="SelectOption">
-                  <Select suffixIcon={<img src={SelectionIcon} className="SelectInput_svg" />}
-                    showSearch placeholder="Type of Candidate" optionFilterProp="children" filterOption={(input, option) =>
-                      option.children.toLowerCase().indexOf(input.toLowerCase()) >= 0
-                    }
-                    className="SelectionInput"
-                    style={{ width: "70%" }} >
-                    
-                  </Select>
-                </Grid>
-
-                <Grid item xs={6} className="SelectOption">
-                  <Select suffixIcon={<img src={SelectionIcon} className="SelectInput_svg" />} showSearch placeholder="Gender" optionFilterProp="children" filterOption={(input, option) =>
-                    option.children.toLowerCase().indexOf(input.toLowerCase()) >= 0
-                  }
-                    className="SelectionInput" style={{ width: "50%" }} >
-                    
-                  </Select>
-                </Grid>
-
-
-                <Grid item xs={6} className="DatepickerInput">
-                  <DatePicker suffixIcon={<img src={CalenderIcon} className="DateInput_svg" />} onChange={onChange} placeholder="Date of Birth" style={{ width: 185 }} className="DatePicker_View" />
-
-                </Grid>
-
-
-                <Grid item xs={6} className="SelectOption">
-                  <Select suffixIcon={<img src={SelectionIcon} className="SelectInput_svg" />} showSearch placeholder="Basic Qualification"
-                    optionFilterProp="children" filterOption={(input, option) =>
-                      option.children.toLowerCase().indexOf(input.toLowerCase()) >= 0
-                    } className="SelectionInput" style={{ width: "70%" }} >
-                    
-                  </Select>
-                </Grid>
-
-                <Grid item xs={6} className="SelectOption">
-                  <Select suffixIcon={<img src={SelectionIcon} className="SelectInput_svg" />} showSearch
-                    placeholder="Additional Qualification 1" optionFilterProp="children"
-                    filterOption={(input, option) =>
-                      option.children.toLowerCase().indexOf(input.toLowerCase()) >= 0
-                    }
-                    className="SelectionInput" style={{ width: "70%" }} >
-                    
-                  </Select>
-                </Grid>
-
-                <Grid item xs={6} className="SelectOption">
-                  <Select suffixIcon={<img src={SelectionIcon} className="SelectInput_svg" />} showSearch placeholder="Additional Qualification 2" optionFilterProp="children"
-                    filterOption={(input, option) =>
-                      option.children.toLowerCase().indexOf(input.toLowerCase()) >= 0
-                    }
-                    className="SelectionInput" style={{ width: "70%" }}  >
-                    
-                  </Select>
-                </Grid>
-
-                <Grid item xs={6} className="SelectOption">
-                  <Select suffixIcon={<img src={SelectionIcon} className="SelectInput_svg" />} showSearch
-                    placeholder="Institution" optionFilterProp="children" filterOption={(input, option) =>
-                      option.children.toLowerCase().indexOf(input.toLowerCase()) >= 0
-                    }
-                    className="SelectionInput" style={{ width: "70%" }} >
-                    
-                  </Select>
-                </Grid>
-
-                <Grid item xs={8}
-                  container alignItems="center" className="ContainerInput">
-                  <Input placeholder="Last Employer" />
-
-                </Grid>
-
-                <Grid item xs={6} className="DatepickerInput">
-                  <DatePicker suffixIcon={<img src={CalenderIcon} className="DateInput_svg" />} onChange={onChange} placeholder="start Date" style={{ width: 185 }} className="DatePicker_View" />
-
-                </Grid>
-
-                <Grid item xs={6} className="DatepickerInput">
-                  <DatePicker suffixIcon={<img src={CalenderIcon} className="DateInput_svg" />} onChange={onChange} placeholder="End Date" style={{ width: 185 }} className="DatePicker_View" />
-
-                </Grid>
-
-                <Grid item xs={8}
-                  container alignItems="center" className="ContainerInput">
-                  <Input placeholder="Reference Email 1" />
-
-                </Grid>
-
-                <Grid item xs={8}
-                  container alignItems="center" className="ContainerInput">
-                  <Input placeholder="Reference Email 2" />
-
-                </Grid>
-
-                <Grid item xs={6}
-                  container alignItems="center" className="ContainerInput">
-                  <Input placeholder="Reference Phone 1" />
-
-                </Grid>
-
-                <Grid item xs={6}
-                  container alignItems="center" className="ContainerInput">
-                  <Input placeholder="Reference Phone 2" />
-
-                </Grid>
-
-              </Grid>
-            </div>
-            <div className="Right_Container">
-              <Grid container direction="column" justify="center" spacing={1}>
-                <Grid item xs={12} className="SelectOption">
-                  <Select suffixIcon={<img src={SelectionIcon} className="SelectInput_svg" />} showSearch
-                    placeholder="Skils" optionFilterProp="children" filterOption={(input, option) =>
-                      option.children.toLowerCase().indexOf(input.toLowerCase()) >= 0
-                    }
-                    className="SelectionInput" style={{ width: "70%" }}  >
-                    
-                  </Select>
-                </Grid>
-
-                <Grid item xs={12} className="SelectOption">
-                  <Select suffixIcon={<img src={SelectionIcon} className="SelectInput_svg" />}
-                    showSearch placeholder="Traits" optionFilterProp="children"
-                    filterOption={(input, option) =>
-                      option.children.toLowerCase().indexOf(input.toLowerCase()) >= 0
-                    }
-                    className="SelectionInput" style={{ width: "70%" }}  >
-                    
-                  </Select>
-                </Grid>
-
-                <Grid item xs={12} className="SelectOption">
-                  <Select suffixIcon={<img src={SelectionIcon} className="SelectInput_svg" />} showSearch
-                    placeholder="Certification" optionFilterProp="children" filterOption={(input, option) =>
-                      option.children.toLowerCase().indexOf(input.toLowerCase()) >= 0
-                    }
-                    className="SelectionInput" style={{ width: "70%" }} >
-                   
-                  </Select>
-                </Grid>
-
-                <Grid item xs={12} className="SelectOption">
-                  <Select suffixIcon={<img src={SelectionIcon} className="SelectInput_svg" />} showSearch placeholder="Specializations"
-                    optionFilterProp="children" filterOption={(input, option) =>
-                      option.children.toLowerCase().indexOf(input.toLowerCase()) >= 0
-                    }
-                    className="SelectionInput" style={{ width: "70%" }} >
-                    
-                  </Select>
-                </Grid>
-
-                <Grid item xs={12} className="SelectOption">
-                  <Select
-                    suffixIcon={<img src={SelectionIcon} className="SelectInput_svg" />} showSearch placeholder="Talents" optionFilterProp="children" filterOption={(input, option) =>
-                      option.children.toLowerCase().indexOf(input.toLowerCase()) >= 0
-                    }
-                    className="SelectionInput" style={{ width: "70%" }} >
-                    
-                  </Select>
-                </Grid>
-
-                <Grid item xs={12} className="SelectOption">
-                  <Select
-                    suffixIcon={<img src={SelectionIcon} className="SelectInput_svg" />} showSearch placeholder="Special Intrests" optionFilterProp="children" filterOption={(input, option) =>
-                      option.children.toLowerCase().indexOf(input.toLowerCase()) >= 0
-                    }
-                    className="SelectionInput" style={{ width: "70%" }} >
-                    
-                  </Select>
-                </Grid>
-
-                <Grid item xs={5} container alignItems="center" className="ContainerInput">
-                  <Input placeholder="Contact Phone " style={{ width: "200%" }} />
-                </Grid>
-
-                <Grid item xs={8} container alignItems="center" className="ContainerInput">
-                  <Input placeholder="Email Id " />
-                </Grid>
-
-
-                <Grid item xs={8} container alignItems="center" className="ContainerInput">
-                  <Input placeholder="Mail Address " />
-                </Grid>
-
-                <Grid item xs={12} className="SelectOption">
-                  <Select
-                    suffixIcon={<img src={SelectionIcon} className="SelectInput_svg" />} showSearch placeholder="State of Domecile" optionFilterProp="children" filterOption={(input, option) =>
-                      option.children.toLowerCase().indexOf(input.toLowerCase()) >= 0
-                    }
-                    className="SelectionInput" style={{ width: "70%" }} >
-                    
-                  </Select>
-                </Grid>
-
-                <Grid item xs={12} className="SelectOption">
-                  <Select
-                    suffixIcon={<img src={SelectionIcon} className="SelectInput_svg" />} showSearch placeholder="City" optionFilterProp="children" filterOption={(input, option) =>
-                      option.children.toLowerCase().indexOf(input.toLowerCase()) >= 0
-                    }
-                    className="SelectionInput" style={{ width: "70%" }} >
-                    
-                  </Select>
-                </Grid>
-
-                <Grid item xs={12} className="SelectOption">
-                  <Select
-                    suffixIcon={<img src={SelectionIcon} className="SelectInput_svg" />} showSearch placeholder="Languages Known" optionFilterProp="children" filterOption={(input, option) =>
-                      option.children.toLowerCase().indexOf(input.toLowerCase()) >= 0
-                    }
-                    className="SelectionInput" style={{ width: "70%" }} >
-                   
-                  </Select>
-                </Grid>
-
-                <Grid item xs={12} className="SelectOption">
-                  <Select
-                    suffixIcon={<img src={SelectionIcon} className="SelectInput_svg" />} showSearch placeholder="Industry" optionFilterProp="children" filterOption={(input, option) =>
-                      option.children.toLowerCase().indexOf(input.toLowerCase()) >= 0
-                    }
-                    className="SelectionInput" style={{ width: "70%" }} >
-                    
-                  </Select>
-                </Grid>
-                <Grid item xs={8} container direction="row" justify="space-around" alignItems="flex-start" className="Final_buttons" >
-                  <div className="SaveButton"> Save</div>
-                  <div className="CancelButton"> Cancel</div>
-
-                </Grid>
-
-              </Grid>
-            </div>
-
-          </div>
+              {/* <Route path='/logout' component={Logout} /> */}
+            </Switch>
+          </Router>
         </div>
 
 

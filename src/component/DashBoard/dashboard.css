@@ -1,0 +1,41 @@
+/* .Taskboxes{
+    height: 80px;
+    border: 1px solid purple;
+    border-radius: 15px;
+    background-color: white;
+}
+
+.Number_Timer{
+    height: 80px;
+    border-radius: 15px 0px 0px 15px;
+}
+
+.TaskNumber{
+
+    height: 40px;
+    width: 30%;
+    background-color: rgb(148, 143, 143);
+    border-bottom: 1px solid purple;
+    text-align: center;
+    font-size: 20px;
+    color: white;
+}
+
+.AccessTime_Icon{
+    height: 40px;
+    width: 23%;
+    background-color: rgb(148, 143, 143);
+    text-align: center;
+    padding-top: 1%;
+
+}
+
+.Task_Rating{
+    border-right: 1px solid purple;
+}
+.Star_Task{
+    background-color: rgb(148, 143, 143);
+    height: 78px;
+    border-radius: 0px 15px 15px 0px;
+    padding: 5px;
+} */
