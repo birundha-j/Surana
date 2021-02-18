@@ -70,7 +70,9 @@ function App() {
         </Header>
 
         <Layout >
-          <Sider className="SiderView">Sider</Sider>
+          <Sider className="SiderView">
+            <div className="Logostructure">Logo</div>
+          </Sider>
           <Content ><Grid item xs={12}>
 
 

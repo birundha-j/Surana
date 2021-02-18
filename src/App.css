@@ -7,62 +7,238 @@
   background-color: rgb(69, 20, 160);
 } */
 
-.navbarContainer .MuiGrid-spacing-xs-2{
+.navbarContainer .MuiGrid-spacing-xs-2 {
   margin: auto;
 }
+.MasterContainer {
+  height: 900px;
+}
 
-.userInfo{
+.userInfo {
   display: flex;
   justify-content: space-around;
 }
 
-.customIcon_header{
+.customIcon_header {
   font-size: 35px !important;
   color: black;
 }
 
-.customIconArrow_header{
+.customIconArrow_header {
   font-size: 30px !important;
   color: black;
 }
 
 @media only screen and (max-width: 1000px) {
-  .customIcon_header{
-    font-size: 20px !important;;
+  .customIcon_header {
+    font-size: 20px !important;
+    ;
   }
-  .customIconArrow_header{
-    font-size: 15px !important;;
+
+  .customIconArrow_header {
+    font-size: 15px !important;
+    ;
+  }
+
+  .master_container {
+    font-size: 8px !important;
+    ;
+
   }
 }
 
 
-.customSearch_Header .ant-input{
+.customSearch_Header .ant-input {
   border-top-left-radius: 13px;
   border-bottom-left-radius: 13px;
+  border: 1px solid rgb(199, 193, 193);
 }
 
-.customSearch_Header .ant-input ~ span,.customSearch_Header .ant-input ~ span button{
+.customSearch_Header .ant-input~span,
+.customSearch_Header .ant-input~span button {
   border-top-right-radius: 13px !important;
   border-bottom-right-radius: 13px !important;
 }
-.Header_Title{
+
+.Header_Title {
   color: #420F8D;
   font-weight: bold;
   font-size: 24px;
   padding-left: 8% !important;
 }
-.userName{
+
+.userName {
   color: #8A8A8A;
   font-weight: bold;
   font-size: 16px;
 
 }
-.userPosition{
+
+.userPosition {
   color: #8A8A8A;
 
 }
 
-.Container{
+.Container {
   height: 700px;
   /* background-color: #E4E4E4; */
+}
+
+.Logostructure {
+  height: 100px;
+  margin-top: 40%;
+  text-align: center;
+  margin-left: 27%;
+}
+
+.LogoDesign {
+  width: 60%;
+  height: 110px;
+  background-color: white;
+  font-size: 20px;
+  font-weight: bold;
+  padding-top: 20%;
+  border-radius: 54px;
+}
+
+.ContentTitle {
+  font-size: 24px;
+  font-weight: 550;
+  color: #000000;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  height: 50px;
+}
+
+.master_container {
+  display: flex;
+  padding: 1%;
+}
+
+.Left_Container {
+  width: 55%;
+  padding-left: 7%;
+}
+
+.Right_Container {
+  width: 45%;
+
+}
+
+.SelectInput_svg {
+  width: 167%;
+  height: 19px;
+}
+.DateInput_svg{
+  height: 20px;
+}
+
+.ContainerInput .ant-input {
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  border: 1px solid #410F8A;
+
+}
+
+.SelectionInput .ant-select-arrow {
+  margin-top: -11px;
+  margin-right: 5px;
+
+}
+
+/* .SelectionInput .ant-select-arrow .anticon .anticon-down-circle  svg{
+  fill: purple !important;
+} */
+
+.SelectOption .ant-select:not(.ant-select-customize-input) .ant-select-selector {
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  border: 1px solid #410F8A;
+
+}
+
+.DatepickerInput .ant-picker {
+
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  border: 1px solid #410F8A;
+}
+
+.DatepickerInput .ant-picker-suffix {
+  font-size: 23px;
+  color: #410F8A;
+}
+
+.SaveButton {
+  height: 35px;
+  width: 30%;
+  background-color: #6B14A6;
+  text-align: center;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  padding-top: 5px;
+  border-radius: 8px;
+  box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.75);
+  margin-top: 10%;
+  cursor: pointer;
+}
+
+.CancelButton{
+  height: 35px;
+  width: 30%;
+  background-color: rgb(251, 248, 252);
+  text-align: center;
+  color: rgb(134, 130, 130);
+  font-size: 18px;
+  font-weight: bold;
+  padding-top: 5px;
+  border-radius: 8px;
+  box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.75);
+  margin-top: 10%;
+  cursor: pointer;
+
+}
+/* .Final_buttons{
+  display: flex;
+  ju
+} */
+
+.ResumeSider {
+  margin-top: 20%;
+  display: flex;
+  background-color: #6B14A6;
+  height: 50px;
+  padding: 3% 2%;
+  cursor: pointer;
+}
+
+.SiderResume_Button {
+  color: white;
+  font-size: 18px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 2.2% 3%;
+}
+
+/* ::placeholder */
+/* .ant-input:placeholder-shown{
+  color: rgb(83, 82, 82) !important;
+}
+
+.ant-select-selection__placeholder{
+  color : blue !important;
+} */
+
+::-webkit-input-placeholder {
+  color: rgb(87, 84, 84) !important;
+}
+
+.ant-select-single.ant-select-show-arrow .ant-select-selection-placeholder {
+  color: rgb(87, 84, 84) !important;
+
 }
