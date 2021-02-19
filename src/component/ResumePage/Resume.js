@@ -39,7 +39,7 @@ function ResumePage() {
 
                         <Grid item xs={6} className="SelectOption">
                             <Select suffixIcon={<img src={SelectionIcon} className="SelectInput_svg" />}
-                                showSearch placeholder="Type of Candidate" optionFilterProp="children" filterOption={(input, option) =>
+                                showSearch placeholder="Type of Resource" optionFilterProp="children" filterOption={(input, option) =>
                                     option.children.toLowerCase().indexOf(input.toLowerCase()) >= 0
                                 }
                                 className="SelectionInput"

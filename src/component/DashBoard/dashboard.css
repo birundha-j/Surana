@@ -1,41 +1,157 @@
-/* .Taskboxes{
-    height: 80px;
+
+
+.TaskBox{
+    width: 95%;
+    height: 100px;
+    margin: auto;
     border: 1px solid purple;
     border-radius: 15px;
-    background-color: white;
+    display: flex;
 }
 
-.Number_Timer{
-    height: 80px;
-    border-radius: 15px 0px 0px 15px;
+.Task_Count_time{
+    width: 5%;
+    height: 98px;
+    background-color: gray;
+    border-radius: 16px 0px 0px 16px;
 }
 
-.TaskNumber{
-
-    height: 40px;
-    width: 30%;
-    background-color: rgb(148, 143, 143);
-    border-bottom: 1px solid purple;
+.Task_counter{
+    width: 80%;
+    height: 49px;
+    border-bottom:1px solid purple;
+    margin: auto;
     text-align: center;
-    font-size: 20px;
+    padding-top: 12%;
+    font-size: 24px;
+    font-weight: bold;
     color: white;
 }
 
-.AccessTime_Icon{
-    height: 40px;
-    width: 23%;
-    background-color: rgb(148, 143, 143);
-    text-align: center;
-    padding-top: 1%;
-
+.TaskTimer_Icon{
+    width: 80%;
+    height: 49px;
 }
 
-.Task_Rating{
-    border-right: 1px solid purple;
+.MiddleContent{
+    width: 90%;
+    height: 98px;
+    background-color: white;
+    display: flex;
 }
-.Star_Task{
-    background-color: rgb(148, 143, 143);
-    height: 78px;
-    border-radius: 0px 15px 15px 0px;
+
+.Task_Details{
+    width: 55%;
+    height: 98px;
+    margin: left;
     padding: 5px;
-} */
+}
+.MainTask_Details{
+    font-size: 15px;
+    font-family: monospace;
+    font-weight: bold;
+}
+
+.SubTask_Details{
+    font-size: 13px;
+    font-family: monospace;
+}
+
+ .Task_Progress{
+    height: 60px;
+    border-right: 1px solid purple;
+    width: 1%;
+    margin-top: 19px;
+} 
+.Task_StarRate{
+    width: 5%;
+    height: 99px;
+    background-color: gray;
+    border-radius: 0px 16px 16px 0px;
+
+}
+
+.Task_Details .ant-progress-text{
+    color: purple;
+    font-size: 18px;
+}
+
+.Task_Details .ant-progress-bg{
+    height: 10px !important;
+}
+
+@media only screen and (max-width: 1100px) {
+    .MainTask_Details {
+      font-size: 10px !important;
+      ;
+    }
+  
+    .SubTask_Details {
+      font-size: 9px !important;
+      ;
+    }
+    .Task_Details .ant-progress-bg{
+        height: 8px !important;
+    }
+    .Task_Details .ant-progress-text{
+        color: purple;
+        font-size: 14px !important;
+    }
+    .Task_Date_Link {
+        font-size: 10px !important;
+        ;
+      }
+    
+      .Task_startDate {
+        font-size: 9px !important;
+        ;
+      }
+      .ViewTotalHours{
+          font-size: 9px !important;
+        ;
+      }
+  
+    
+  } 
+
+  .Task_Date_Details{
+    width: 30%;
+    height: 98px;
+    padding: 2% 1% ;
+
+  }
+
+  .Task_startDate{
+      display: flex;
+  }
+
+  .Task_Date_Link{
+      font-size: 17px;
+      padding-top: 1%;
+  }
+
+  .TotalTask_Hours{
+    height: 98px;
+    padding: 1% ;
+    width: 13%;
+
+  }
+  .ViewTotalHours{
+      width: 80%;
+      height: 55px;
+      margin: auto;
+      text-align: center;
+      color: white;
+      background-color: purple;
+      border-radius: 10px;
+      padding: 1%;
+  }
+  .Task_hoursView{
+      font-weight: 550;
+  }
+
+  .Hours_View{
+      font-weight: bold;
+      font-size: 22px;
+  }
+   

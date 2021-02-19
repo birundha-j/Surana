@@ -99,12 +99,28 @@
   margin-top: 20%;
   display: flex;
   height: 50px;
-  padding: 3% 2%;
+  padding: 3% 3%;
   cursor: pointer; 
 } 
-
-.ResumeSider:hover{
+.ResumeSiders {
+  margin-top: 20%;
+  display: flex;
+  height: 50px;
+  cursor: pointer; 
   background-color: #6B14A6;
+
+} 
+
+
+.ChooseList{
+  padding: 3%;
+  display: flex;
+
+}
+.Empty_SpaceListview{
+  width:5% ;
+  background-color: rgb(182, 21, 197);
+  height: 50px;
 
 }
 
@@ -112,7 +128,8 @@
   color: white;
   font-size: 18px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  padding: 2.2% 3%;
+  padding: 0% 5%;
+  padding-top: 3%;
 }
 
 
