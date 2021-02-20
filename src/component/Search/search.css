@@ -1,0 +1,49 @@
+.Search_Title{
+    font-size: 24px;
+    margin-right: 4%;
+}
+
+.SearchPage_View .ant-input-group .ant-input {
+    border-top-left-radius: 13px !important;
+    border-bottom-left-radius: 13px;
+    border: 1px solid rgb(199, 193, 193);
+    border-color: purple;
+
+  }
+
+.SearchPage_View .ant-input-search  .ant-input-group  .ant-input-group-addon:last-child .ant-input-search-button:not(.ant-btn-primary) {
+    color: rgba(0, 0, 0, 0.45);
+    border-left: none !important;
+    border-top-right-radius: 13px !important;
+    border-bottom-right-radius: 13px !important;
+    border-color: purple;
+    height: 45px;
+}
+
+.SearchPage_View .ant-input-group-addon{
+    background-color: transparent !important;
+}
+
+.SearchPage_View .ant-input-group .ant-input {
+    height: 45px ;
+
+
+}
+
+.SearchInputFields{
+    width: 100%;
+    height: 140px;
+    background-color: #BFBFBF;
+    border-radius: 10px;
+}
+
+.SearchInputFields .ant-input{
+    height: 30px;
+    width: 60%;
+}
+
+.Fields_Title{
+    font-size: 15px;
+    font-weight: bold;
+    padding-top: 8px;
+}

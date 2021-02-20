@@ -24,10 +24,13 @@ import ListItemText from '@material-ui/core/ListItemText';
 
 // input icons:
 import SelectionIcon from './images/selectIcon.png'
+import SearchIcon from '@material-ui/icons/Search';
 // Router:
 import { BrowserRouter as Router, Switch, Route, Redirect, Link } from 'react-router-dom';
 import ResumePage from './component/ResumePage/Resume'
 import Dashboard from './component/DashBoard/dashboard'
+import Notifications from './component/Notification/notification'
+import SearchPage from './component/Search/search'
 
 
 
@@ -46,7 +49,7 @@ const useStyles = makeStyles((theme) => ({
     height: 64,
     display: 'flex',
     alignItems: 'center',
-    backgroundColor: 'white',
+    backgroundColor: 'purple',
   },
   drawer: {
     width: drawerWidth,
@@ -79,6 +82,8 @@ export default function ClippedDrawer() {
   const [selectresume, setSelectresume] = useState(true)
   const [selectdash, setSelectdash] = useState(false)
   const [selectdashboard, setSelectdashboard] = useState(false)
+  const [selectSearch, setSelectSearch] = useState(false)
+
 
 
   const classes = useStyles();
@@ -87,12 +92,15 @@ export default function ClippedDrawer() {
     setSelectdash(true)
     setSelectresume(false)
     setSelectdashboard(false)
+    setSelectSearch(false)
 
   }
   function changeResume() {
     setSelectresume(true)
     setSelectdash(false)
     setSelectdashboard(false)
+    setSelectSearch(false)
+
 
 
 
@@ -101,11 +109,17 @@ export default function ClippedDrawer() {
     setSelectdashboard(true)
     setSelectdash(false)
     setSelectresume(false)
+    setSelectSearch(false)
 
 
 
   }
-
+  function changeSearch() {
+    setSelectdashboard(false)
+    setSelectdash(false)
+    setSelectresume(false)
+    setSelectSearch(true)
+  }
 
   return (
     <Router >
@@ -167,12 +181,22 @@ export default function ClippedDrawer() {
 
               </div>
             </Link>
-            <Link to="/dashboard" onClick={changedashboard}>
+            <Link to="/notification" onClick={changedashboard}>
               <div className={selectdashboard ? "ResumeSiders" : "ResumeSider"}>
                 <div className={selectdashboard ? "Empty_SpaceListview" : "Empty_SpaceList"}></div>
                 <div className="ChooseList">
                   <NotificationsIcon style={{ color: "pink" }} className="customIcon_header" />
-                  <div className="SiderResume_Button" >  DASHBOARD</div>
+                  <div className="SiderResume_Button" >  NOTIFICATION</div>
+                </div>
+
+              </div>
+            </Link>
+            <Link to="/search" onClick={changeSearch}>
+              <div className={selectSearch ? "ResumeSiders" : "ResumeSider"}>
+                <div className={selectSearch ? "Empty_SpaceListview" : "Empty_SpaceList"}></div>
+                <div className="ChooseList">
+                  <SearchIcon style={{ color: "white" }} className="customIcon_header" />
+                  <div className="SiderResume_Button" >  SEARCH</div>
                 </div>
 
               </div>
@@ -196,8 +220,9 @@ export default function ClippedDrawer() {
             <Switch>
               <Route exact path='/' component={ResumePage} />
               <Route path='/dashboard' component={Dashboard} />
+              <Route path='/notification' component={Notifications} />
+              <Route path='/search' component={SearchPage} />
 
-              {/* <Route path='/logout' component={Logout} /> */}
             </Switch>
           </div>
 

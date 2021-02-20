@@ -14,12 +14,12 @@
 
 .customIcon_header {
   font-size: 35px !important;
-  color: black;
+  color: white;
 } 
 
  .customIconArrow_header {
   font-size: 30px !important;
-  color: black;
+  color: white;
 }
 
 @media only screen and (max-width: 1000px) {
@@ -54,21 +54,21 @@
 } 
 
 .Header_Title {
-  color: #420F8D;
+  color: white;
   font-weight: bold;
   font-size: 24px;
   padding-left: 8% !important;
 }
 
 .userName {
-  color: #8A8A8A;
+  color: white;
   font-weight: bold;
   font-size: 16px;
 
 }
 
 .userPosition {
-  color: #8A8A8A;
+  color: white;
 
 }
 
@@ -96,18 +96,19 @@
 
 
  .ResumeSider {
-  margin-top: 20%;
   display: flex;
   height: 50px;
-  padding: 3% 3%;
+  padding: 3% 6%;
   cursor: pointer; 
+  margin-top: 6%;
 } 
 .ResumeSiders {
-  margin-top: 20%;
   display: flex;
   height: 50px;
   cursor: pointer; 
   background-color: #6B14A6;
+  margin-top: 6%;
+  padding-left: 1%;
 
 } 
 

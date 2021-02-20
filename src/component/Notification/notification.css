@@ -1,0 +1,32 @@
+.notification_Header{
+    font-size: 20px;
+    font-weight: bold;
+    height: 50px;
+    padding: 1%;
+}
+.Tasks_Table{
+    width: 94%;
+    height: 330px;
+    border-bottom: 1px solid purple;
+    margin: auto;
+}
+.TableView{
+    width: 100%;
+    margin: auto;
+}
+
+.Table_Header{
+    font-size: 18px;
+    font-weight: bold;
+    color: purple;
+
+}
+
+.TableDate{
+    font-size: 15px;
+}
+.Tasks_TableView{
+    width: 94%;
+    height: 330px;
+    margin: auto;
+}
