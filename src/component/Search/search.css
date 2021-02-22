@@ -47,3 +47,23 @@
     font-weight: bold;
     padding-top: 8px;
 }
+.Select_svg{
+    width: 150%;
+    height: 19px;
+}
+.SelectInput{
+    display: flex;
+}
+
+.selectBorder  .ant-select-selector {
+    cursor: text;
+    border-radius: 10px !important;
+}
+
+@media only screen and (max-width: 1100px) {
+    .Fields_Title {
+      font-size: 10px !important;
+      ;
+    }
+    
+  } 
