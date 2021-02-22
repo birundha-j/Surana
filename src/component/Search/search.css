@@ -1,4 +1,4 @@
-.Search_Title{
+.Search_Title {
     font-size: 24px;
     margin-right: 4%;
 }
@@ -9,9 +9,9 @@
     border: 1px solid rgb(199, 193, 193);
     border-color: purple;
 
-  }
+}
 
-.SearchPage_View .ant-input-search  .ant-input-group  .ant-input-group-addon:last-child .ant-input-search-button:not(.ant-btn-primary) {
+.SearchPage_View .ant-input-search .ant-input-group .ant-input-group-addon:last-child .ant-input-search-button:not(.ant-btn-primary) {
     color: rgba(0, 0, 0, 0.45);
     border-left: none !important;
     border-top-right-radius: 13px !important;
@@ -20,50 +20,153 @@
     height: 45px;
 }
 
-.SearchPage_View .ant-input-group-addon{
+.SearchPage_View .ant-input-group-addon {
     background-color: transparent !important;
 }
 
 .SearchPage_View .ant-input-group .ant-input {
-    height: 45px ;
+    height: 45px;
 
 
 }
 
-.SearchInputFields{
+.SearchInputFields {
     width: 100%;
     height: 140px;
     background-color: #BFBFBF;
     border-radius: 10px;
 }
 
-.SearchInputFields .ant-input{
+.SearchInputFields .ant-input {
     height: 30px;
     width: 60%;
 }
 
-.Fields_Title{
+.Fields_Title {
     font-size: 15px;
     font-weight: bold;
     padding-top: 8px;
 }
-.Select_svg{
+
+.Select_svg {
     width: 150%;
     height: 19px;
 }
-.SelectInput{
+
+.SelectInput {
     display: flex;
 }
 
-.selectBorder  .ant-select-selector {
+.selectBorder .ant-select-selector {
     cursor: text;
     border-radius: 10px !important;
 }
 
 @media only screen and (max-width: 1100px) {
     .Fields_Title {
-      font-size: 10px !important;
-      ;
+        font-size: 10px !important;
+        ;
     }
+
+}
+
+.search_GoButton {
+    width: 60%;
+    height: 30px;
+    color: white;
+    background-color: purple;
+    font-size: 20px;
+    font-weight: bold;
+    margin: auto;
+    text-align: center;
+    padding-top: 3px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+/* Table form: */
+
+
+.tableFormat{
+    margin-top: 3%;
+}
+
+.tableViews{
+    width: 96%;
+    height: auto;
+    margin: auto;
     
-  } 
+}
+
+.tableHeading{
+    color: purple;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.tableRows td{
+    font-size: 18px;
+
+}
+
+/* Footer */
+
+.footerTable{
+    width: 100%;
+    height: auto;
+    padding-top: 2%;
+    /* padding-left: 20%; */
+    display: flex;
+    justify-content: space-evenly;
+    /* margin-top: 1%; */
+    /* margin:auto; */
+
+}
+
+.footerTable .MuiPaginationItem-icon {
+    /* margin: 0 -8px; */
+    font-size: 40px;
+    color: purple;
+}
+
+.viewInteriviewDetails{
+    width: 30%;
+    height: 40px;
+    color: white;
+    background-color: purple;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 7px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.75);
+    cursor: pointer;
+}
+
+.interviewModel .ant-modal-body{
+    padding: 0px;
+}
+.interviewModel .ant-modal-content{
+    border-radius: 8px;
+}
+
+.header_Model{
+    height: 50px;
+    background-color: #7C0899;
+    border-radius: 8px 8px 0px 0px;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+   padding-top: 9px;
+}
+.interviewModel_show{
+    height: 300px;
+    border-radius: 8px;
+}
+
+.modelContainer{
+    padding-top: 3% ;
+    padding-left: 7%;
+}
+
